@@ -11,7 +11,7 @@
     <h1 style="color: #5b616d;"><%= post.title %></h1>
     <p><%= _.truncate(post.body, {"length": 150, "omission": "..."}) %>
     <br>
-    <form action="/posts/<%= post.title %>">
+    <form action="/posts/<%= post._id %>">
         <button name="postID" value="<%= post._id %>" onclick="this.form.submit()" style="background-color: white; border: white; color: blue;">read more</button>
     </form>
     <form action="/delete" method="post">
